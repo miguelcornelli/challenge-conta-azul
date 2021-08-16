@@ -1,0 +1,123 @@
+temperature-component{
+  display: block;
+  width: 250px;
+  background-color: #fff;
+  color: #B4B4B4;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0px 0px 5px #3333331a;
+  border-radius: 5px;
+  overflow: hidden;
+  order: 3;
+
+  @media only screen and (max-width: 991px) {
+    margin: 40px auto;
+  }
+
+  @media only screen and (min-width: 992px) {
+    &:nth-child(1){
+      order: 2;
+    }
+
+    &:nth-child(2){
+      order: 1;
+    }
+  }
+
+  .loading, .error{
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .error .error-detail{
+    .message{
+      margin-bottom: 15px;
+      color:#ED1946;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .button{
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #737c84;
+      border: 2px solid #737c84;
+      
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 5px #3333335e;
+      }
+      
+      &:active {
+        box-shadow: inset 0px 0px 5px #3333335e;
+      }
+    }
+  }
+
+  .title{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    color: #737c84;
+    font-size: 18px;
+  }
+
+  .temperature{
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+
+    &.blue{
+      color: #69A3FF
+    }
+    &.orange{
+      color: #FF9632
+    }
+    &.red{
+      color: #ED1946
+    }
+  }
+
+  .info{
+    background-color: #f8f8f8;
+
+    .info-extra{
+      display: flex;
+      align-items: flex-end;
+      
+      .info-extra-content{
+        height: 48px;
+        padding-top: 15px;
+        margin: 0 auto;
+
+        .info-extra-title{
+          font-size: 12px;
+        }
+        
+        .info-extra-data{
+          color: #737c84;
+          font-size: 12px;
+
+          .info-extra-value{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  
+    .updated{
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+    }
+  }
+}

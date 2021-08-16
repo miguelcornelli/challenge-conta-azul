@@ -1,0 +1,14 @@
+header{
+  width: 100%;
+  height: 55px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #EBEBEB;
+  z-index: 999;
+             
+  .logo{
+    margin: auto;
+  }
+}
